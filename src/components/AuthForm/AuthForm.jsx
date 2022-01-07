@@ -53,7 +53,6 @@ export default function AuthForm() {
         }
       
     }
-    console.log(auth.user, 'outside');
     
     return (
         <div>
@@ -63,17 +62,22 @@ export default function AuthForm() {
                     <legend>{location.pathname==='/register' ? 'Create Account': 'Sign In'}</legend>
                     <label>Email:
                         <input 
+                        type='email'
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}/> 
                     </label>
                     <label>Password:
-                        <input 
+                        <input
+                        type='password' 
                         value={password}
                         onChange={(e)=>setPassword(e.target.value)}/>
                     </label>
                     <button type='submit'>Submit</button>
                 </fieldset>
             </form>
+            <div>
+                {errorx && <p>{errorx}</p>}
+            </div>
             <div>{location.pathname === '/register' ? <p>Already have an account?<Link to='/login'>Sign In</Link></p> : <p>Don't have an account? <Link to='/register'>Create an account here</Link></p>}
             </div>
         </div>
