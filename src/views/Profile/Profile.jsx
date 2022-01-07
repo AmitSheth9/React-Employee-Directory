@@ -14,13 +14,14 @@ export default function Profile() {
     const [name, setName] = useState('');
     const [bd, setBD] = useState('');
     const [about, setAbout] = useState('');
-    const [hasProfile, setHasProfile] = useState(false)
+    const [hasProfile, setHasProfile] = useState('')
     const [profile, setProfile] = useState({});
     
 
     useEffect( async () => {
         const returnedProfile = await getProfile();
-        if(profile) {
+        console.log(returnedProfile)
+        if(returnedProfile.name) {
             setHasProfile(true);
             setProfile(returnedProfile);
             console.log(returnedProfile);
@@ -40,14 +41,7 @@ export default function Profile() {
     }
     return (
         <div>
-            {hasProfile ? <div className={styles.container}>{auth.user.email}'s Profile
-                <p>Name: {profile.name}</p>
-                <p>Email: {profile.email}</p>
-                <p>Birthday: {profile.birthday}</p>
-                <p>About: {profile.bio}</p>
-                <button onClick={handleClick}>Edit Profile</button>
-                </div> :
-                <ProfileForm 
+            {!hasProfile ? <ProfileForm 
                     handleSubmit={handleSubmit}
                     named={name}
                     setNamed={setName}
@@ -55,7 +49,16 @@ export default function Profile() {
                     setBD={setBD}
                     about={about}
                     setAbout={setAbout} 
-                    formTitle='Create Profilex' />      
+                    formTitle='Create Profilex' />    
+                    
+                    : <div className={styles.container}>{auth.user.email}'s Profile
+                <p>Name: {profile.name}</p>
+                <p>Email: {profile.email}</p>
+                <p>Birthday: {profile.birthday}</p>
+                <p>About: {profile.bio}</p>
+                <button onClick={handleClick}>Edit Profile</button>
+                </div> 
+                  
             }
         </div>
     )

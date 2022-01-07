@@ -18,8 +18,8 @@ export default function Header() {
     }
     return (
         <div className={styles.container}>
-            <div>
-                <Link to='/'>ACME</Link>
+            <div className={styles.acme}>
+                <Link to='/'>ACME INC</Link>
             </div>
             <div>
             {auth.user.email ? `Welcome, ${auth.user.email}` : <div>Not Signed In  <Link to='/login'>  Sign in</Link></div> }

@@ -9,6 +9,7 @@ import { useUser } from "./context/UserContext";
 import Profile from "./views/Profile/Profile";
 import Header from "./components/Layout/Header";
 import EditProfile from "./views/Profile/EditProfile";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 export default function App() {
   return(
@@ -28,12 +29,12 @@ export default function App() {
     <Route path='/confirm-email'>
       <ConfirmEmail/>
     </Route>
-    <Route path='/profile/edit'>
+    <PrivateRoute path='/profile/edit'>
       <EditProfile />
-    </Route>
-    <Route path ='/profile'>
+    </PrivateRoute>
+    <PrivateRoute path ='/profile'>
       <Profile />
-    </Route>
+    </PrivateRoute>
     </Switch>
   </Router>
   </UserProvider>
