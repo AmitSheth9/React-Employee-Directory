@@ -1,11 +1,11 @@
 import { createContext, useContext, useState } from "react";
-import { getUser } from "../services/users";
+
 
 const UserContext = createContext();
 
-const UserProvider = ({ children }) => {
-    const presentUser = getUser();
-    const [user, setUser] = useState(presentUser ? { id: presentUser.id, email: presentUser.email } : {} );
+const UserProvider = ({ mockUser, children }) => {
+    
+    const [user, setUser] = useState(mockUser ? { id: mockUser.id, email: mockUser.email } : {} );
 
     const [signedIn, setSignedIn] = useState(false);
 
