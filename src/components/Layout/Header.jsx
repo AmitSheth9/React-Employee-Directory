@@ -8,6 +8,8 @@ export default function Header() {
     const auth = useUser();
     const history = useHistory();
 
+    
+
     const handleClick = async () => {
         const userOut = await signOutUser();
         auth.setUser({});

@@ -8,7 +8,7 @@ import { useState } from "react";
 import { useUser } from "./context/UserContext";
 import Profile from "./views/Profile/Profile";
 import Header from "./components/Layout/Header";
-
+import EditProfile from "./views/Profile/EditProfile";
 
 export default function App() {
   return(
@@ -27,6 +27,9 @@ export default function App() {
     </Route>
     <Route path='/confirm-email'>
       <ConfirmEmail/>
+    </Route>
+    <Route path='/profile/edit'>
+      <EditProfile />
     </Route>
     <Route path ='/profile'>
       <Profile />
