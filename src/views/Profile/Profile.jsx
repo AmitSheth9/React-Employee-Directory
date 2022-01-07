@@ -6,6 +6,7 @@ import AuthForm from '../../components/AuthForm/AuthForm'
 import { useState, useEffect } from 'react/cjs/react.development'
 import ProfileForm from '../../components/ProfileForm/ProfileForm'
 import { useHistory } from 'react-router-dom'
+import styles from './Profile.css'
 
 export default function Profile() {
     const auth = useUser();
@@ -39,7 +40,7 @@ export default function Profile() {
     }
     return (
         <div>
-            {hasProfile ? <div>{auth.user.email}'s Profile
+            {hasProfile ? <div className={styles.container}>{auth.user.email}'s Profile
                 <p>Name: {profile.name}</p>
                 <p>Email: {profile.email}</p>
                 <p>Birthday: {profile.birthday}</p>

@@ -1,35 +1,36 @@
 import React from 'react'
 import { useUser } from '../../context/UserContext'
+import styles from './ProfileForm.css'
 
 export default function ProfileForm({handleSubmit, named, setNamed, bd, setBD, about, setAbout, formTitle }) {
     const auth = useUser();
     
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form className={styles.form}onSubmit={handleSubmit}>
                 <fieldset>
                     <legend>{formTitle}</legend>
-                    <label>Name
+                    <label>Name:
                         <input 
                         value={named}
                         onChange={(e)=>setNamed(e.target.value)}
                             />
-                    </label>
-                    <label>Email &nbsp;
+                    </label><br/>
+                    <label>Email: &nbsp;
                         {auth.user.email}
-                    </label>
-                    <label>&nbsp;Birthdate
+                    </label><br/>
+                    <label>Birthdate:
                         <input 
                         value={bd}
                         onChange={(e)=>setBD(e.target.value)}
                         />
-                    </label>
-                    <label>About
+                    </label><br/>
+                    <label>About:
                         <input
                         value={about}
                         onChange={(e)=>setAbout(e.target.value)}
                         />
-                    </label>
+                    </label><br/>
                     <button type='submit'>Submit</button>
                 </fieldset>
             </form>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useUser } from '../../context/UserContext'
 import { signOutUser } from '../../services/users';
 import { useHistory } from 'react-router-dom';
+import styles from './Header.css'
 
 export default function Header() {
     const auth = useUser();
@@ -13,16 +14,20 @@ export default function Header() {
     const handleClick = async () => {
         const userOut = await signOutUser();
         auth.setUser({});
-        history.replace('/login');
+        history.replace('/');
     }
     return (
-        <div>
+        <div className={styles.container}>
             <div>
-            {auth.user.email ? `Welcome ${auth.user.email}` : <p>Not Signed In<Link to='/login'>Sign in</Link></p>}
+                <Link to='/'>ACME</Link>
             </div>
-        <div>
+            <div>
+            {auth.user.email ? `Welcome, ${auth.user.email}` : <div>Not Signed In  <Link to='/login'>  Sign in</Link></div> }
+            </div>
+            <div>
             {auth.user.email ? <button onClick={handleClick}>Sign Out</button> : <p></p>}
-        </div>
+            </div>
+            <br/><br/>
         </div>
     )
 }

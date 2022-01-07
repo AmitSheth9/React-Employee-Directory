@@ -1,0 +1,11 @@
+.container {
+    border: 5px solid black;
+    margin: 15px;
+    width: 50%;
+
+}
+
+p {
+    border: 1px solid black;
+    margin: 15px;
+}
