@@ -5,14 +5,17 @@ import ConfirmEmail from "./views/Auth/ConfirmEmail";
 import Home
  from "./views/Home/Home";
 import { useState } from "react";
- 
+import { useUser } from "./context/UserContext";
+import Profile from "./views/Profile/Profile";
+import Header from "./components/Layout/Header";
+
+
 export default function App() {
-
-  //const [signedIn, setSignedIn] = useState(false)
-
   return(
-<UserProvider>
+    <UserProvider>
   <Router>
+    <Header/>
+    <Switch>
     <Route exact path='/' >
       <Home />
     </Route>
@@ -25,7 +28,12 @@ export default function App() {
     <Route path='/confirm-email'>
       <ConfirmEmail/>
     </Route>
+    <Route path ='/profile'>
+      <Profile />
+    </Route>
+    </Switch>
   </Router>
-</UserProvider>
+  </UserProvider>
+
   );
 }
