@@ -3,7 +3,7 @@ import { getProfile } from '../../services/profiles'
 import { createProfile } from '../../services/profiles'
 import { useUser } from '../../context/UserContext'
 import AuthForm from '../../components/AuthForm/AuthForm'
-import { useState, useEffect } from 'react/cjs/react.development'
+import { useState, useEffect } from 'react';
 import ProfileForm from '../../components/ProfileForm/ProfileForm'
 import { useHistory } from 'react-router-dom'
 import styles from './Profile.css'
