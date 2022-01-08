@@ -11,7 +11,7 @@ import styles from './Profile.css'
 export default function Profile() {
     const auth = useUser();
     const history = useHistory();
-    const [name, setName] = useState('');
+    const [named, setNamed] = useState('');
     const [bd, setBD] = useState('');
     const [about, setAbout] = useState('');
     const [hasProfile, setHasProfile] = useState('')
@@ -43,8 +43,8 @@ export default function Profile() {
         <div>
             {!hasProfile ? <ProfileForm 
                     handleSubmit={handleSubmit}
-                    named={name}
-                    setNamed={setName}
+                    named={named}
+                    setNamed={setNamed}
                     bd ={bd}
                     setBD={setBD}
                     about={about}
