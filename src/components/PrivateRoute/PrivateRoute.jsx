@@ -6,7 +6,7 @@ export default function PrivateRoute({ children, ...rest}) {
 
     const auth = useUser();
     return (
-        <div>PR
+        <div>
             <Route {...rest} render={({ location }) => auth.user.email ? (children) : (
                 <Redirect to={{ pathname: '/login', state: { from: location }}} />
             ) } />

@@ -21,11 +21,12 @@ export default function Header() {
             <div className={styles.acme}>
                 <Link to='/'>ACME INC</Link>
             </div>
-            <div>
+            <div className={styles.status}>
             {auth.user.email ? `Welcome, ${auth.user.email}` : <div>Not Signed In  <Link to='/login'>  Sign in</Link></div> }
             </div>
             <div>
             {auth.user.email ? <button onClick={handleClick}>Sign Out</button> : <p></p>}
+            <br/><br/>
             </div>
             <br/><br/>
         </div>

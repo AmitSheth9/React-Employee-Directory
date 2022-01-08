@@ -2,12 +2,22 @@
     display: flex;
     justify-content: space-evenly;
     border: 5px solid black;
+    height: 200%;
+    
 }
 .acme {
     background: yellow;
     color: brown;
-    border: 2px solid black;
-    font-size: 150%;
-    width: 20%;
+    border: 3px solid black;
+    margin: 3px;
+    font-size: 200%;
+    height: 170%;
+    padding: 5px;
     
+}
+.status {
+    font-size: 150%;
+}
+button {
+    font-size: 150%;
 }

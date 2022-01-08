@@ -26,9 +26,6 @@ export default function Profile() {
             setProfile(returnedProfile);
             console.log(returnedProfile);
         }
-        else {
-            setHasProfile(false)
-        }
     }, [])
 
     const handleClick = () => {

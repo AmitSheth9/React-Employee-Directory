@@ -1,12 +1,12 @@
 .form {
-   
+   padding: 14px;
 }
 
 label {
     margin: 10px;
-
+    height: 250%;
 }
 input {
     margin: 10px;
-    height: 150%;
+    
 }

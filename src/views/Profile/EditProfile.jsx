@@ -4,6 +4,7 @@ import { useUser } from '../../context/UserContext';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react';
 import { updateProfile } from '../../services/profiles';
+import styles from './EditProfile.css'
 
 export default function EditProfile() {
     const auth = useUser();
