@@ -34,7 +34,7 @@ export default function Profile() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const profileCreated = createProfile({ name, email: auth.user.email, bio: about, birthday: bd})
+        const profileCreated = createProfile({ name: named, email: auth.user.email, bio: about, birthday: bd})
     }
     return (
         <div>

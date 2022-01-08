@@ -22,10 +22,11 @@ export default function Header() {
                 <Link to='/'>ACME INC</Link>
             </div>
             <div className={styles.status}>
-            {auth.user.email ? `Welcome, ${auth.user.email}` : <div>Not Signed In  <Link to='/login'>  Sign in</Link></div> }
+            {auth.user.email ? `Welcome, ${auth.user.email}` : ''}
             </div>
             <div>
-            {auth.user.email ? <button onClick={handleClick}>Sign Out</button> : <p></p>}
+            {auth.user.email ? <button onClick={handleClick}>Sign Out</button> : <div className={styles.authstatus}>  <Link to='/login'>  Sign in</Link></div> }
+            
             <br/><br/>
             </div>
             <br/><br/>

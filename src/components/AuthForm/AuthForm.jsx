@@ -32,11 +32,9 @@ export default function AuthForm() {
       try {
         console.log(auth.user, 'submit');
         if(!email || password.length < 8 ) {
-            throw new Error('Invalid attempt. Must be valid email and password of 8 characters')
+            throw new Error('Must be valid email and password of 8 characters')
         }
-    } catch (error) {
-      setErrorX(error.message);
-      }
+   
         
         if(location.pathname === '/register') {
             const returned = await signUpUser(email, password);
@@ -51,7 +49,9 @@ export default function AuthForm() {
             console.log(auth.user);
             history.replace('/profile')
         }
-      
+    } catch (error) {
+        setErrorX(error.message);
+        }
     }
     
     return (
