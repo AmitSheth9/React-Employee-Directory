@@ -8,13 +8,14 @@ jest.mock('../../context/UserContext')
 
 it('should render Header', () => {
     const { container } = render(
+        
         <UserProvider>
        
         <MemoryRouter>
             <Header />
         </MemoryRouter>
-       
         </UserProvider>
     );
+
     expect(container).toMatchSnapshot();
 } );

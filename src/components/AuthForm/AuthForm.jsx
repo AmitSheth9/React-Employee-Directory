@@ -78,7 +78,9 @@ export default function AuthForm() {
             <div>
                 {errorx && <p>{errorx}</p>}
             </div>
-            <div>{location.pathname === '/register' ? <p>Already have an account?<Link to='/login'>Sign In</Link></p> : <p>Don't have an account? <Link to='/register'>Create an account here</Link></p>}
+            <div>{location.pathname === '/register' ? <p>Already have an account?<Link to='/login'>Sign In</Link></p> 
+            : 
+            <p>Don't have an account? <Link to='/register'>Create an account here</Link></p>}
             </div>
         </div>
         </div>

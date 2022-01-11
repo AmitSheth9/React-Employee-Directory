@@ -14,18 +14,22 @@ exports[`should render Header 1`] = `
         ACME INC
       </a>
     </div>
+    <div
+      class="status"
+    />
     <div>
-      <div>
-        Not Signed In  
+      <div
+        class="authstatus"
+      >
+          
         <a
           href="/login"
         >
             Sign in
         </a>
       </div>
-    </div>
-    <div>
-      <p />
+      <br />
+      <br />
     </div>
     <br />
     <br />
