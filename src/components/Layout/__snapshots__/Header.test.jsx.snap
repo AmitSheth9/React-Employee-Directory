@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <div
+      class="acme"
+    >
+      <a
+        href="/"
+      >
+        ACME INC
+      </a>
+    </div>
+    <div
+      class="status"
+    />
+    <div>
+      <div
+        class="authstatus"
+      >
+          
+        <a
+          href="/login"
+        >
+            Sign in
+        </a>
+      </div>
+      <br />
+      <br />
+    </div>
+    <br />
+    <br />
+  </div>
+</div>
+`;

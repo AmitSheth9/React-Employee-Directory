@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render AuthForm 1`] = `
+<div>
+  <div>
+    <div>
+      <form>
+        <fieldset>
+          <legend>
+            Sign In
+          </legend>
+          <label>
+            Email:
+            <input
+              type="email"
+              value=""
+            />
+          </label>
+          <label>
+            Password:
+            <input
+              type="password"
+              value=""
+            />
+          </label>
+          <button
+            type="submit"
+          >
+            Submit
+          </button>
+        </fieldset>
+      </form>
+      <div />
+      <div>
+        <p>
+          Don't have an account? 
+          <a
+            href="/register"
+          >
+            Create an account here
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
